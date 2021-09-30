@@ -30,8 +30,12 @@ def get_first_picture_link(driver, query):
     link = side_picture.get_attribute('src')
     # Even after the visibility of the element is located src returns data instead of the link for some time
 
+    counter = 0
     while link[:4] != 'http':
+        counter +=1
         link = side_picture.get_attribute('src')
+        if counter > 1000
+            return None
     return link
 
 
