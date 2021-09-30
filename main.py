@@ -34,7 +34,7 @@ def get_first_picture_link(driver, query):
     while link[:4] != 'http':
         counter +=1
         link = side_picture.get_attribute('src')
-        if counter > 1000
+        if counter > 1000:
             return None
     return link
 
