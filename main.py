@@ -35,7 +35,7 @@ def get_first_picture_link(driver, query):
         counter +=1
         link = side_picture.get_attribute('src')
         if counter > 1000:
-            return None
+            return None # Return None if src returns data instead of link even after element is located and some more time (1000 iterations)
     return link
 
 
